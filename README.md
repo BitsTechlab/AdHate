@@ -1,5 +1,5 @@
 # AdHate
-hate ads? download this.
+block ads everywhere
 
 [![Build status](https://ci.appveyor.com/api/projects/status/5e16npng919sbghi?svg=true)](https://ci.appveyor.com/project/Syrexide/volumefeedback) ![Language](https://img.shields.io/badge/language-C%23-178600.svg) ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 # Notes
