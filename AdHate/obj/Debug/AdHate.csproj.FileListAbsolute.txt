@@ -1,0 +1,9 @@
+c:\users\w\documents\visual studio 2015\Projects\AdHate\AdHate\bin\Debug\AdHate.exe.config
+c:\users\w\documents\visual studio 2015\Projects\AdHate\AdHate\bin\Debug\AdHate.exe
+c:\users\w\documents\visual studio 2015\Projects\AdHate\AdHate\bin\Debug\AdHate.pdb
+c:\users\w\documents\visual studio 2015\Projects\AdHate\AdHate\obj\Debug\AdHate.csprojResolveAssemblyReference.cache
+c:\users\w\documents\visual studio 2015\Projects\AdHate\AdHate\obj\Debug\AdHate.Form1.resources
+c:\users\w\documents\visual studio 2015\Projects\AdHate\AdHate\obj\Debug\AdHate.Properties.Resources.resources
+c:\users\w\documents\visual studio 2015\Projects\AdHate\AdHate\obj\Debug\AdHate.csproj.GenerateResource.Cache
+c:\users\w\documents\visual studio 2015\Projects\AdHate\AdHate\obj\Debug\AdHate.exe
+c:\users\w\documents\visual studio 2015\Projects\AdHate\AdHate\obj\Debug\AdHate.pdb
