@@ -15,12 +15,24 @@ namespace AdHate
         public Form1()
         {
             InitializeComponent();
-            // backup hosts
-            if (File.Exists(etc + "hosts") && Settings.Default.firstrun == false || !File.Exists(etc + "hosts.bak"))
+            try
             {
-                File.Copy(etc + "hosts", etc + "hosts.bak", true);
-                Settings.Default.firstrun = true;
-                Settings.Default.Save();
+                // backup hosts
+                if (File.Exists(etc + "hosts") && Settings.Default.firstrun == false || !File.Exists(etc + "hosts.bak"))
+                {
+                    File.Copy(etc + "hosts", etc + "hosts.bak", true);
+                    Settings.Default.firstrun = true;
+                    Settings.Default.Save();
+                }
+            }
+            catch (Exception ex)
+            {
+                textBox1.ForeColor = Color.Red;
+                textBox1.Text = textBox1.Text + "\r\nWARNING: " + Convert.ToString(ex);
+                textBox1.Text = textBox1.Text + "\r\nNo changes to your system have been made.";
+                progressBar1.Value = 0;
+                button1.Enabled = true;
+                button2.Enabled = true;
             }
         }
 
@@ -34,6 +46,8 @@ namespace AdHate
                 button2.Enabled = false;
 
                 // take ownership of hosts
+                textBox1.Text = "Taking ownership of hosts";
+
                 System.Diagnostics.Process process = new System.Diagnostics.Process();
                 System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
                 startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
@@ -43,11 +57,13 @@ namespace AdHate
                 process.StartInfo = startInfo;
                 process.Start();
 
-                textBox1.Text = "Took ownership of hosts file";
+                textBox1.Text = textBox1.Text + "\r\nTook ownership of hosts";
 
                 progressBar1.Value = 10;
 
                 // get mega-hosts file
+                textBox1.Text = textBox1.Text + "\r\nGetting mega-hosts file";
+
                 StringBuilder sb = new StringBuilder();
 
                 byte[] buf = new byte[8192];
@@ -76,18 +92,22 @@ namespace AdHate
                 }
                 while (count > 0);
 
-                textBox1.Text = textBox1.Text + "\r\nGot mega-hosts file (by StevenBlack)";
+                textBox1.Text = textBox1.Text + "\r\nGot mega-hosts file (by StevenBlack on GitHub)";
 
                 progressBar1.Value = 80;
 
                 // write to hosts
-                File.WriteAllText(etc + "hosts", sb.ToString());
+                textBox1.Text = textBox1.Text + "\r\nWriting to hosts";
 
-                textBox1.Text = textBox1.Text + "\r\nWritten to hosts file";
+                File.AppendAllText(etc + "hosts", "\r\n# Begin mega-hosts file\r\n\r\n" + sb.ToString());
+
+                textBox1.Text = textBox1.Text + "\r\nWritten to hosts";
 
                 progressBar1.Value = 90;
 
-                // flush dns
+                //flush dns
+                textBox1.Text = textBox1.Text + "\r\nFlushing DNS cache";
+
                 startInfo.Arguments = "/c ipconfig /flushdns";
                 process.StartInfo = startInfo;
                 process.Start();
@@ -123,6 +143,8 @@ namespace AdHate
                 button2.Enabled = false;
 
                 // restore hosts
+                textBox1.Text = "Restoring hosts";
+
                 progressBar1.Value = 0;
 
                 if (File.Exists(etc + "hosts"))
@@ -134,9 +156,11 @@ namespace AdHate
 
                 progressBar1.Value = 90;
 
-                textBox1.Text = "Restored hosts";
+                textBox1.Text = textBox1.Text + "\r\nRestored hosts";
 
                 // flush dns
+                textBox1.Text = textBox1.Text + "\r\nFlushing DNS cache";
+
                 System.Diagnostics.Process process = new System.Diagnostics.Process();
                 System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
                 startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
