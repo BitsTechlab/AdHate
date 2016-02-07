@@ -7,14 +7,3 @@ c:\users\w\documents\visual studio 2015\Projects\AdHate\AdHate\obj\Debug\AdHate.
 c:\users\w\documents\visual studio 2015\Projects\AdHate\AdHate\obj\Debug\AdHate.csproj.GenerateResource.Cache
 c:\users\w\documents\visual studio 2015\Projects\AdHate\AdHate\obj\Debug\AdHate.exe
 c:\users\w\documents\visual studio 2015\Projects\AdHate\AdHate\obj\Debug\AdHate.pdb
-C:\Users\w\Documents\GitHub\AdHate\AdHate\bin\Debug\AdHate.exe.config
-C:\Users\w\Documents\GitHub\AdHate\AdHate\obj\Debug\AdHate.exe
-C:\Users\w\Documents\GitHub\AdHate\AdHate\obj\Debug\AdHate.pdb
-C:\Users\w\Documents\GitHub\AdHate\AdHate\bin\Debug\AdHate.exe
-C:\Users\w\Documents\GitHub\AdHate\AdHate\bin\Debug\AdHate.pdb
-C:\Users\w\Documents\GitHub\AdHate\AdHate\obj\Debug\AdHate.csprojResolveAssemblyReference.cache
-C:\Users\w\Documents\GitHub\AdHate\AdHate\obj\Debug\AdHate.Form1.resources
-C:\Users\w\Documents\GitHub\AdHate\AdHate\obj\Debug\AdHate.Properties.Resources.resources
-C:\Users\w\Documents\GitHub\AdHate\AdHate\obj\Debug\AdHate.csproj.GenerateResource.Cache
-C:\Users\w\Documents\GitHub\AdHate\AdHate\obj\Debug\AdHate.TrustInfo.xml
-C:\Users\w\Documents\GitHub\AdHate\AdHate\obj\Debug\AdHate.exe.manifest
