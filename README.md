@@ -5,6 +5,7 @@ block ads everywhere
 # Notes
  * Verified to work on **Windows 7** and up.
  * Requires ≥ Visual Studio 2013 to open the solution file.
+ * [Credit to Steven Black for the hosts file](https://github.com/StevenBlack/hosts/blob/master/hosts)
 
 # How to Use
 
